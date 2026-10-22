@@ -1,0 +1,59 @@
+<!--{"title":"Contact & Book a Site Visit | German Resort, Ranchi","desc":"Call, WhatsApp or email German Resort, Ranchi, or book a private site visit using our online calendar.","nav":"visit","crumb":{"label":"Contact"},"hero":{"img":"lobby.jpg","alt":"Resort lobby with chandelier","eyebrow":"Contact &amp; enquiry","h1":"Let's <em>talk.</em>","text":"Call, WhatsApp, email or book a private site visit. We usually reply within one working day.","compact":true}}-->
+		<section class="section">
+			<div class="wrap interest" style="align-items:start">
+				<div class="reveal">
+					<p class="eyebrow">Reach us</p>
+					<h2 class="title" style="margin-bottom:28px">We'd love to <em>hear from you.</em></h2>
+					<div class="contact-cards">
+						<a class="contact-card" data-link="tel" href="#">{{icon:phone}}<div><small>Call</small><strong data-site="phone"></strong></div></a>
+						<a class="contact-card" data-link="wa" href="#">{{icon:whatsapp}}<div><small>WhatsApp</small><strong>Chat with our team</strong></div></a>
+						<a class="contact-card" data-link="mail" href="#">{{icon:mail}}<div><small>Email</small><strong data-site="email"></strong></div></a>
+						<a class="contact-card" href="location.html">{{icon:pin}}<div><small>Sales office</small><strong data-site="address"></strong></div></a>
+					</div>
+					<div class="socials" style="margin-top:24px;color:var(--forest)">
+						<a data-link="instagram" href="#" aria-label="Instagram" style="border-color:var(--line)">{{icon:instagram}}</a>
+						<a data-link="facebook" href="#" aria-label="Facebook" style="border-color:var(--line)">{{icon:facebook}}</a>
+						<a data-link="youtube" href="#" aria-label="YouTube" style="border-color:var(--line)">{{icon:youtube}}</a>
+					</div>
+				</div>
+				<form class="form form-card js-form reveal d1" data-form="contact">
+					<div class="field"><label for="c-name">Full name <span class="req">*</span></label><input id="c-name" name="name" autocomplete="name" required><span class="error">Please tell us your name.</span></div>
+					<div class="field"><label for="c-phone">Phone / WhatsApp <span class="req">*</span></label><input id="c-phone" name="phone" type="tel" autocomplete="tel" placeholder="+91" required><span class="error">Please enter a valid phone number.</span></div>
+					<div class="field"><label for="c-email">Email <span class="req">*</span></label><input id="c-email" name="email" type="email" autocomplete="email" required><span class="error">Please enter a valid email.</span></div>
+					<div class="field"><label for="c-topic">Topic</label><select id="c-topic" name="topic"><option>Wedding</option><option>Stay</option><option>Corporate / social event</option><option>Dining</option><option>Careers</option><option>Vendor / partnership</option><option>Other</option></select></div>
+					<div class="field full"><label for="c-msg">Message <span class="req">*</span></label><textarea id="c-msg" name="message" required minlength="10"></textarea><span class="error">Please write a short message (at least 10 characters).</span></div>
+					<input type="text" name="website" tabindex="-1" autocomplete="off" class="sr-only" aria-hidden="true">
+					<button class="btn" type="submit">Send message {{icon:arrow-right}}</button>
+					<p class="form-note">We'll only use your details to respond. <a href="privacy.html"><u>Privacy policy</u></a>.</p>
+					<p class="form-status" role="status"></p>
+				</form>
+			</div>
+		</section>
+
+		<section class="section tint" id="visit">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<div><p class="eyebrow">Book a site visit</p><h2 class="title">See it <em>in person.</em></h2></div>
+					<p class="lead">Pick a date and time for a guided walk of the site with our team. Visits can be booked up to 90 days ahead.</p>
+				</div>
+				<form class="js-form booking reveal" data-form="visit">
+					<div class="calendar" data-calendar>
+						<div class="cal-head"><h3></h3><div class="cal-nav"><button type="button" data-cal-prev aria-label="Previous month">{{icon:arrow-left}}</button><button type="button" data-cal-next aria-label="Next month">{{icon:arrow-right}}</button></div></div>
+						<div class="cal-grid"></div>
+						<div class="cal-legend"><span>Greyed-out dates are unavailable</span></div>
+					</div>
+					<div class="form form-card" style="box-shadow:none;align-content:start">
+						<div class="field full"><span class="label">Your visit</span><p class="slot-summary"></p><input type="hidden" name="visit_date" data-required="true"><span class="error">Please pick a date on the calendar.</span></div>
+						<div class="field full" hidden><span class="label">Time</span><div class="slots"><button type="button">10:30 AM</button><button type="button">12:00 PM</button><button type="button">2:00 PM</button><button type="button">3:30 PM</button><button type="button">5:00 PM</button></div><input type="hidden" name="visit_slot" data-required="true"><span class="error">Please choose a time.</span></div>
+						<div class="field"><label for="v-name">Full name <span class="req">*</span></label><input id="v-name" name="name" autocomplete="name" required><span class="error">Please tell us your name.</span></div>
+						<div class="field"><label for="v-phone">Phone <span class="req">*</span></label><input id="v-phone" name="phone" type="tel" autocomplete="tel" placeholder="+91" required><span class="error">Please enter a valid phone number.</span></div>
+						<div class="field"><label for="v-people">Visitors</label><select id="v-people" name="visitors"><option>1–2</option><option>3–5</option><option>6+</option></select></div>
+						<div class="field"><label for="v-purpose">Purpose</label><select id="v-purpose" name="purpose"><option>Wedding</option><option>Stay</option><option>Corporate event</option><option>Other</option></select></div>
+						<input type="text" name="website" tabindex="-1" autocomplete="off" class="sr-only" aria-hidden="true">
+						<button class="btn" type="submit">{{icon:calendar}} Request this visit</button>
+						<p class="form-note">We'll confirm your slot by phone or WhatsApp. Site visits are subject to on-site safety rules during construction.</p>
+						<p class="form-status" role="status"></p>
+					</div>
+				</form>
+			</div>
+		</section>

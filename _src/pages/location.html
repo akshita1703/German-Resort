@@ -1,0 +1,70 @@
+<!--{"title":"Location & Getting Here | German Resort, Ranchi","desc":"Map, address, distances from Ranchi airport, railway station and city centre, directions and parking at German Resort, Ranchi.","nav":"visit","crumb":{"label":"Location &amp; getting here"},"hero":{"img":"sunrise.jpg","alt":"Morning light over open countryside","eyebrow":"Location","h1":"Easy to reach. <em>Hard to leave.</em>","text":"In Ranchi, Jharkhand, within easy reach of the airport, the railway station and the city.","compact":true}}-->
+		<section class="section">
+			<div class="wrap booking" style="grid-template-columns:1.3fr .7fr">
+				<div class="map-embed reveal"><iframe data-map title="German Resort on Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+				<div class="contact-cards reveal d1">
+					<div class="contact-card">{{icon:pin}}<div><small>Sales office address</small><strong data-site="address"></strong></div></div>
+					<a class="contact-card" data-link="directions" href="#">{{icon:navigation}}<div><small>Directions</small><strong>Open in Google Maps</strong></div></a>
+					<button class="contact-card" type="button" data-copy="address" style="text-align:left;cursor:pointer;font:inherit">{{icon:copy}}<div><small>Share</small><strong>Copy address</strong></div></button>
+					<a class="contact-card" data-link="tel" href="#">{{icon:phone}}<div><small>Need help finding us?</small><strong data-site="phone"></strong></div></a>
+					<p class="muted" style="font-size:14px;margin:4px 0 0">The resort's exact map pin will be added once the client confirms it.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-sm tint">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<div><p class="eyebrow">Distances</p><h2 class="title">How far <em>from…</em></h2></div>
+					<p class="lead">Distances and drive times will be confirmed against the final site pin.</p>
+				</div>
+				<div class="table-wrap reveal">
+					<table>
+						<thead><tr><th>From</th><th>Distance</th><th>Approx. drive</th><th></th></tr></thead>
+						<tbody>
+							<tr><td>{{icon:plane}}Birsa Munda Airport (IXR)</td><td><span class="tba">TBA km</span></td><td><span class="tba">TBA min</span></td><td><a class="link-arrow" href="https://www.google.com/maps/search/Birsa+Munda+Airport+Ranchi" target="_blank" rel="noopener">Map</a></td></tr>
+							<tr><td>{{icon:train}}Ranchi Junction railway station</td><td><span class="tba">TBA km</span></td><td><span class="tba">TBA min</span></td><td><a class="link-arrow" href="https://www.google.com/maps/search/Ranchi+Junction+railway+station" target="_blank" rel="noopener">Map</a></td></tr>
+							<tr><td>{{icon:train}}Hatia railway station</td><td><span class="tba">TBA km</span></td><td><span class="tba">TBA min</span></td><td><a class="link-arrow" href="https://www.google.com/maps/search/Hatia+railway+station" target="_blank" rel="noopener">Map</a></td></tr>
+							<tr><td>{{icon:city}}Ranchi city centre (Firayalal Chowk)</td><td><span class="tba">TBA km</span></td><td><span class="tba">TBA min</span></td><td><a class="link-arrow" href="https://www.google.com/maps/search/Firayalal+Chowk+Ranchi" target="_blank" rel="noopener">Map</a></td></tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+
+		<section class="section" id="parking">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<div><p class="eyebrow">Arrival &amp; parking</p><h2 class="title">Parking is a problem elsewhere. <em>Not here.</em></h2></div>
+					<p class="lead">Car parking at reception, a larger parking area for guests, and space planned for wedding traffic.</p>
+				</div>
+				<div class="features reveal">
+					<div class="feature">{{icon:car}}<h3>Car parking</h3><p>At reception and in the main lot. Capacity: <span class="tba">TBA cars</span></p></div>
+					<div class="feature">{{icon:route}}<h3>Bus &amp; coach</h3><p>Space for guest coaches and tempo travellers. Capacity: <span class="tba">TBA buses</span></p></div>
+					<div class="feature">{{icon:bell}}<h3>Valet</h3><p>Valet service for weddings and events. <span class="tba">To be confirmed</span></p></div>
+					<div class="feature">{{icon:plane}}<h3>Airport pickup</h3><p>Pickups from the airport and station on request. <span class="tba">To be confirmed</span></p></div>
+					<div class="feature">{{icon:users}}<h3>Wedding shuttles</h3><p>Shuttles for guests staying in the city. <span class="tba">To be confirmed</span></p></div>
+					<div class="feature">{{icon:bolt}}<h3>EV charging</h3><p>Charging points for electric vehicles. <span class="tba">To be confirmed</span></p></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section tint">
+			<div class="wrap interest">
+				<div class="reveal">
+					<p class="eyebrow">Plan your arrival</p>
+					<h2 class="title">Need a pickup or <em>help with directions?</em></h2>
+					<p class="lead">Tell us when you're arriving and we'll help with directions, pickups or a shuttle for your guests.</p>
+				</div>
+				<form class="form form-card js-form reveal d1" data-form="directions">
+					<div class="field"><label for="l-name">Full name <span class="req">*</span></label><input id="l-name" name="name" autocomplete="name" required><span class="error">Please tell us your name.</span></div>
+					<div class="field"><label for="l-phone">Phone / WhatsApp <span class="req">*</span></label><input id="l-phone" name="phone" type="tel" autocomplete="tel" placeholder="+91" required><span class="error">Please enter a valid phone number.</span></div>
+					<div class="field"><label for="l-from">Arriving from</label><select id="l-from" name="arriving_from"><option>Airport</option><option>Railway station</option><option>Ranchi city</option><option>Driving from another city</option></select></div>
+					<div class="field"><label for="l-date">Arrival date</label><input id="l-date" name="date" type="date"></div>
+					<div class="field full"><label for="l-msg">Notes</label><textarea id="l-msg" name="message" placeholder="Flight / train number, number of guests…"></textarea></div>
+					<input type="text" name="website" tabindex="-1" autocomplete="off" class="sr-only" aria-hidden="true">
+					<button class="btn" type="submit">Send request {{icon:arrow-right}}</button>
+					<p class="form-status" role="status"></p>
+				</form>
+			</div>
+		</section>

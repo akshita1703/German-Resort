@@ -1,0 +1,57 @@
+<!--{"title":"Corporate & Social Events in Ranchi | German Resort","desc":"Birthdays, anniversaries, conferences and offsites at German Resort, Ranchi, with a second banquet, lawns, stays and catering in one place.","nav":"experiences","crumb":{"label":"Corporate &amp; social","parent":["Experiences","experiences.html"]},"hero":{"img":"conference.jpg","alt":"Bright conference room with a long table","eyebrow":"Corporate &amp; social events","h1":"Gatherings that <em>go well.</em>","text":"From a 50th birthday to a two-day leadership offsite: a banquet, lawns, stays and a kitchen that delivers."}}-->
+		<section class="section">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<div><p class="eyebrow">Occasions</p><h2 class="title">Whatever you're <em>marking.</em></h2></div>
+					<p class="lead">Our second banquet and lawns are sized for social and corporate events, with stays and dining on the same property.</p>
+				</div>
+				<div class="grid-4">
+					<article class="card reveal"><div class="card-media"><img src="assets/images/celebration.jpg" alt="Friends celebrating" loading="lazy"></div><div class="card-body">{{icon:cake}}<h3>Birthdays</h3><p>Milestone birthdays, kids' pool parties and surprise celebrations.</p></div></article>
+					<article class="card reveal d1"><div class="card-media"><img src="assets/images/reception-table.jpg" alt="Elegant dinner table" loading="lazy"></div><div class="card-body">{{icon:heart}}<h3>Anniversaries</h3><p>A villa stay, a private dinner, or a party for everyone who was there.</p></div></article>
+					<article class="card reveal d2"><div class="card-media"><img src="assets/images/conference.jpg" alt="Conference room" loading="lazy"></div><div class="card-body">{{icon:mic}}<h3>Conferences</h3><p>Launches, dealer meets and town halls in a polished, pillar-free setting.</p></div></article>
+					<article class="card reveal d3"><div class="card-media"><img src="assets/images/pool-sunset.jpg" alt="Pool at sunset" loading="lazy"></div><div class="card-body">{{icon:briefcase}}<h3>Offsites</h3><p>Work by day, pool and dinner by night, without leaving the property.</p></div></article>
+				</div>
+			</div>
+		</section>
+
+		<section class="section tint">
+			<div class="wrap split">
+				<div class="split-media reveal"><img src="assets/images/lawn-reception.jpg" alt="Long dinner tables set on a lawn" loading="lazy"></div>
+				<div class="split-copy reveal d1">
+					<p class="eyebrow">Spaces</p>
+					<h2 class="title">Second banquet <em>+ lawns.</em></h2>
+					<p>The second banquet hosts the formal part. The lawn takes over for networking dinners and evening parties. Bigger events can move into the 17,500 sq ft grand banquet.</p>
+					<ul class="check-list">
+						<li>{{icon:check}} AV, stage and lighting support <span class="tba">Details TBA</span></li>
+						<li>{{icon:check}} Breakout spaces across the resort</li>
+						<li>{{icon:check}} Room blocks and pool villas for delegates</li>
+						<li>{{icon:check}} Ample parking for cars and coaches</li>
+						<li>{{icon:check}} Power backup and Wi-Fi <span class="tba">Details TBA</span></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="section" id="event-enquiry">
+			<div class="wrap interest">
+				<div class="reveal">
+					<p class="eyebrow">Event enquiry</p>
+					<h2 class="title">Tell us about <em>your event.</em></h2>
+					<p class="lead">Share the basics and our events team will come back with spaces, menus and a proposal.</p>
+				</div>
+				<form class="form form-card js-form reveal d1" data-form="event">
+					<div class="field"><label for="e-type">Event type <span class="req">*</span></label><select id="e-type" name="event_type" required><option value="">Choose…</option><option>Birthday</option><option>Anniversary</option><option>Conference / meeting</option><option>Corporate offsite</option><option>Product launch</option><option>Other celebration</option></select><span class="error">Please choose an event type.</span></div>
+					<div class="field"><label for="e-date">Event date</label><input id="e-date" name="date" type="date"></div>
+					<div class="field full"><label for="e-guests">Guests</label><div class="range-wrap"><input id="e-guests" name="guests" type="range" min="10" max="1000" step="10" value="100"><output for="e-guests">100</output></div></div>
+					<div class="field"><label for="e-name">Full name <span class="req">*</span></label><input id="e-name" name="name" autocomplete="name" required><span class="error">Please tell us your name.</span></div>
+					<div class="field"><label for="e-company">Company <span class="hint">(if corporate)</span></label><input id="e-company" name="company" autocomplete="organization"></div>
+					<div class="field"><label for="e-phone">Phone / WhatsApp <span class="req">*</span></label><input id="e-phone" name="phone" type="tel" autocomplete="tel" placeholder="+91" required><span class="error">Please enter a valid phone number.</span></div>
+					<div class="field"><label for="e-email">Email</label><input id="e-email" name="email" type="email" autocomplete="email"><span class="error">Please enter a valid email.</span></div>
+					<div class="field full"><span class="label">Need</span><div class="chips"><label class="chip"><input type="checkbox" name="needs" value="Stay"><span>Stay</span></label><label class="chip"><input type="checkbox" name="needs" value="Catering"><span>Catering</span></label><label class="chip"><input type="checkbox" name="needs" value="AV &amp; stage"><span>AV &amp; stage</span></label><label class="chip"><input type="checkbox" name="needs" value="Décor"><span>Décor</span></label><label class="chip"><input type="checkbox" name="needs" value="DJ"><span>DJ</span></label></div></div>
+					<div class="field full"><label for="e-msg">Details</label><textarea id="e-msg" name="message"></textarea></div>
+					<input type="text" name="website" tabindex="-1" autocomplete="off" class="sr-only" aria-hidden="true">
+					<button class="btn" type="submit">Send event enquiry {{icon:arrow-right}}</button>
+					<p class="form-status" role="status"></p>
+				</form>
+			</div>
+		</section>
