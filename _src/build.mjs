@@ -73,6 +73,8 @@ const icons = {
 	baby: '<circle cx="12" cy="7" r="4"/><path d="M5 22v-2a7 7 0 0 1 14 0v2M10 7h.01M14 7h.01"/>',
 	paw: '<circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="4" cy="8" r="2"/><path d="M8 14c0-2 2-4 4-4s4 2 4 4c0 1.5 2 2 2 4a3 3 0 0 1-3 3c-1 0-2-.5-3-.5s-2 .5-3 .5a3 3 0 0 1-3-3c0-2 2-2.5 2-4z"/>',
 	wheelchair: '<circle cx="15" cy="4" r="2"/><path d="M13 7v6h5l3 6M13 10H9M9 12a6 6 0 1 0 7 7"/>',
+	yoga: '<circle cx="12" cy="4" r="2"/><path d="M12 7v7M5 10l7 2 7-2M8 21l4-7 4 7M4 21h16"/>',
+	bike: '<circle cx="5.5" cy="17" r="3.5"/><circle cx="18.5" cy="17" r="3.5"/><path d="M5.5 17L9 9h6l3.5 8M9 9l3 8h2M14 5h2l-1 4"/>',
 	door: '<path d="M13 4h3a2 2 0 0 1 2 2v14M2 20h3M13 20h9M10 12v.01M13 4.6v16.2a1 1 0 0 1-1.2 1L5 20V5.6a2 2 0 0 1 1.5-1.9l4-1A2 2 0 0 1 13 4.6z"/>'
 };
 const sprite = `<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>${Object.entries(icons).map(([k, v]) => `<symbol id="i-${k}" viewBox="0 0 24 24">${v}</symbol>`).join('')}</defs></svg>`;
@@ -94,11 +96,13 @@ const navTree = [
 	{ key: 'experiences', label: 'Experiences', children: [
 		{ href: 'experiences.html', label: 'Leisure & pool', sub: 'Slides, jacuzzi, night club' },
 		{ href: 'dining.html', label: 'Dining', sub: 'Multi-cuisine, veg and Jain' },
-		{ href: 'events.html', label: 'Corporate & social', sub: 'Birthdays, offsites, conferences' }
+		{ href: 'events.html', label: 'Corporate & social', sub: 'Birthdays, offsites, conferences' },
+		{ href: 'amenities.html', label: 'All amenities', sub: 'Pool, villas, parking & more' }
 	] },
 	{ key: 'gallery', label: 'Gallery', href: 'gallery.html' },
 	{ key: 'visit', label: 'Visit', children: [
 		{ href: 'location.html', label: 'Location & getting here', sub: 'Map, distances, parking' },
+		{ href: 'destinations.html', label: 'Explore Ranchi', sub: 'Waterfalls, temples, day trips' },
 		{ href: 'offers.html', label: 'Offers & updates', sub: 'Early-bird dates, progress news' },
 		{ href: 'faqs.html', label: 'FAQs', sub: 'Policies and practical answers' },
 		{ href: 'contact.html', label: 'Contact & site visit', sub: 'Book a visit, call or WhatsApp' }
@@ -151,6 +155,8 @@ const footer = `<footer class="footer">
 						<li><a href="stay.html">Rooms &amp; villas</a></li>
 						<li><a href="experiences.html">Leisure &amp; pool</a></li>
 						<li><a href="dining.html">Dining</a></li>
+						<li><a href="amenities.html">Amenities</a></li>
+						<li><a href="destinations.html">Explore Ranchi</a></li>
 						<li><a href="gallery.html">Gallery</a></li>
 					</ul>
 				</div>

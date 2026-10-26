@@ -417,7 +417,7 @@ button.contact-card { width: 100%; color: inherit; }
 .slider-track { display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding-bottom: 6px; scrollbar-width: none; }
 .slider-track::-webkit-scrollbar { display: none; }
 .slider-track > * { flex: 0 0 calc((100% - 48px) / 3); scroll-snap-align: start; }
-.slider-controls { display: flex; align-items: center; gap: 10px; }
+.slider-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
 .slider-controls button { width: 50px; height: 50px; display: grid; place-items: center; border: 1px solid currentColor; border-radius: 50%; background: transparent; color: var(--forest); font-size: 20px; transition: background .2s, color .2s; }
 .slider-controls button:hover { background: var(--forest); color: white; }
 .dark .slider-controls button { color: white; }
@@ -560,6 +560,44 @@ a.contact-card:hover { border-color: var(--gold); }
 .preview-strip .g-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s; }
 .preview-strip .g-item:hover img { transform: scale(1.05); }
 .preview-strip .g-label { position: absolute; top: 12px; left: 12px; padding: 4px 10px; border-radius: 999px; background: rgba(255, 253, 248, .92); color: var(--forest); font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+
+/* Amenities */
+.amenity-legend { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-bottom: 32px; color: var(--muted); font-size: 14px; }
+.amenity-legend span { display: inline-flex; align-items: center; gap: 10px; }
+.pill { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 11px; font-style: normal; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+.pill.ok { background: rgba(20, 53, 44, .1); color: var(--forest); }
+.pill.plan { border: 1px dashed rgba(156, 122, 60, .6); color: var(--gold-dark); }
+.amenity-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.amenity-group { display: flex; flex-direction: column; padding: 32px; border: 1px solid var(--line); border-radius: 20px; background: var(--white); scroll-margin-top: calc(var(--header-h) + 70px); }
+.amenity-group header { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.amenity-group header .icon { width: 50px; height: 50px; padding: 12px; border-radius: 50%; background: var(--sand); color: var(--gold-dark); }
+.amenity-group h2 { font-size: 32px; }
+.amenity-group ul { margin: 0; padding: 0; list-style: none; }
+.amenity-group li { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 16px; }
+.amenity-group li:last-child { border-bottom: 0; }
+.amenity-group li .icon { color: var(--gold-dark); font-size: 20px; }
+.amenity-group li span { flex: 1; }
+.amenity-strip { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+.amenity-strip a { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 22px 10px; border: 1px solid var(--line); border-radius: 14px; background: var(--white); font-size: 14px; font-weight: 500; text-align: center; transition: border-color .2s, transform .2s; }
+.amenity-strip a:hover { border-color: var(--gold); transform: translateY(-3px); }
+.amenity-strip .icon { font-size: 30px; color: var(--gold-dark); stroke-width: 1.3; }
+
+/* Destinations */
+.dest-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+.dest-card { display: flex; flex-direction: column; overflow: hidden; border-radius: var(--radius); background: var(--white); box-shadow: 0 1px 0 var(--line); transition: transform .35s, box-shadow .35s; }
+.dest-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.dest-card.hide { display: none; }
+.dest-media { position: relative; aspect-ratio: 4/3; overflow: hidden; background: #cfc6b3; }
+.dest-media img { width: 100%; height: 100%; object-fit: cover; cursor: zoom-in; transition: transform .8s cubic-bezier(.2, .7, .2, 1); }
+.dest-card:hover .dest-media img { transform: scale(1.05); }
+.dest-body { display: flex; flex: 1; flex-direction: column; padding: 22px 24px 18px; }
+.dest-body h3 { font-size: 30px; }
+.dest-body p { margin: 8px 0 16px; color: var(--muted); font-size: 15px; }
+.dest-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: auto 0 0; padding: 14px 0 0; border-top: 1px solid var(--line); list-style: none; }
+.dest-meta li { display: inline-flex; align-items: center; gap: 6px; padding: 5px 11px; border-radius: 999px; background: var(--sand); font-size: 13px; }
+.dest-meta .icon { color: var(--gold-dark); }
+.credit { display: block; margin-top: 12px; color: #9a9c96; font-size: 11px; }
+.dest-strip .tile { min-height: 380px; }
 
 /* Video tour placeholder */
 .video-tour { position: relative; display: grid; place-items: center; min-height: 520px; overflow: hidden; border-radius: 24px; color: white; text-align: center; isolation: isolate; }
@@ -730,7 +768,8 @@ a.contact-card:hover { border-color: var(--gold); }
 	.split-media .inset { right: 16px; }
 	.split-media .badge { left: 16px; }
 	.grid-4 { grid-template-columns: repeat(2, 1fr); }
-	.grid-3, .packages, .features { grid-template-columns: repeat(2, 1fr); }
+	.grid-3, .packages, .features, .dest-grid { grid-template-columns: repeat(2, 1fr); }
+	.amenity-strip { grid-template-columns: repeat(3, 1fr); }
 	.package.featured { transform: none; }
 	.tiles-wedding { grid-template-columns: 1fr 1fr; grid-template-rows: 380px 280px 280px; }
 	.tiles-wedding .tile:first-child { grid-row: auto; grid-column: span 2; }
@@ -790,6 +829,9 @@ a.contact-card:hover { border-color: var(--gold); }
 	.preview-strip { grid-template-columns: 1fr 1fr; grid-template-rows: 260px 160px 160px; }
 	.preview-strip .g-item:first-child { grid-column: span 2; grid-row: auto; }
 	.offer { grid-template-columns: 1fr; }
+	.amenity-groups, .dest-grid { grid-template-columns: 1fr; }
+	.amenity-group { padding: 24px 20px; }
+	.amenity-strip { grid-template-columns: repeat(2, 1fr); }
 	.offer img { min-height: 260px; }
 	.stats { grid-template-columns: 1fr 1fr; gap: 0 18px; }
 	.footer { padding-top: 64px; padding-bottom: 100px; }

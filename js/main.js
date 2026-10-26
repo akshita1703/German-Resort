@@ -224,7 +224,7 @@ if (lightbox) {
 		if (!item) return;
 		e.preventDefault();
 		const group = item.dataset.lightbox;
-		const items = $$(`[data-lightbox="${group}"]`).filter((el) => !el.classList.contains('hide'));
+		const items = $$(`[data-lightbox="${group}"]`).filter((el) => !el.closest('.hide'));
 		lbOpen(items, items.indexOf(item));
 	});
 	$('.lb-close', lightbox).addEventListener('click', lbClose);
@@ -244,7 +244,7 @@ if (lightbox) {
 /* ---------- Gallery filters ---------- */
 const filterBar = $('[data-filters]');
 if (filterBar) {
-	const items = $$('.masonry .g-item');
+	const items = $$(filterBar.dataset.filters || '.masonry .g-item');
 	$$('button', filterBar).forEach((btn) => {
 		const cat = btn.dataset.filter;
 		const n = cat === 'all' ? items.length : items.filter((i) => i.dataset.cat.split(' ').includes(cat)).length;
